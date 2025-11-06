@@ -31,8 +31,7 @@ import Rmpoims from '../images/rmpoims.png';
 import BestPortfolio from '../images/Best IT Portfolio Profile.jpg';
 import Innovateit from '../images/Innovate it CyberSecurity.jpg';
 import OracleAnalytics from '../images/Oracle Analytics Cloud 2025.jpg';
-import Resume from '../images/John Anthony Pesco RESUME.pdf';
-
+import Resume from '/John Anthony Pesco RESUME.pdf';
 const textToType = "I'm a System Developer / Web Developer";
 
 const certificates = [
