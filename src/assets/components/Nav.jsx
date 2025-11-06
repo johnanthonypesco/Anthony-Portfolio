@@ -3,7 +3,7 @@ import { useState } from 'react';
 import '../css/nav.css';
 // import logo from '../images/logo.png';
 
-export default function Nav() {
+export default function Nav({ openResume }) {
 
     const [open, setOpen] = useState(false);
 
@@ -15,7 +15,7 @@ export default function Nav() {
                 <li><a href="#about" className='hover:text-[#f12711] font-regular tracking-wide transition duration-300'>About Me</a></li>
                 <li><a href="#portfolio" className='hover:text-[#f12711] font-regular tracking-wide transition duration-300'>Portfolio</a></li>
                 <li><a href="#contact" className='hover:text-[#f12711] font-regular tracking-wide transition duration-300'>Contact Me</a></li>
-            <button onClick={() => window.open("https://pescojohnanthony.jobs180.com/", '_blank')} id='downloadcv' className='flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1DA1F2] flex items-center justify-center w-fit font-semibold hover:-translate-y-1 transform duration-300'><i class="fa-solid fa-file-export"></i>Download My CV</button>
+            <button onClick={openResume} id='downloadcv' className='flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1DA1F2] flex items-center justify-center w-fit font-semibold hover:-translate-y-1 transform duration-300'><i class="fa-solid fa-file-export"></i>Download My CV</button>
             </ul>
 
             <i class={"fa-solid fa-bars text-2xl hover:text-[#f12711] transition duration-300 hover:cursor-pointer lg:hidden block" + (open ? ' fa-xmark' : ' fa-bars')} onClick={() => setOpen(!open)}></i>

@@ -28,16 +28,23 @@ import Resort from '../images/resort.JPG';
 import AcademiCheck from '../images/academicheck.png';
 import ArkVisions from '../images/arkvisions.png';
 import Rmpoims from '../images/rmpoims.png';
+import BestPortfolio from '../images/Best IT Portfolio Profile.jpg';
+import Innovateit from '../images/Innovate it CyberSecurity.jpg';
+import OracleAnalytics from '../images/Oracle Analytics Cloud 2025.jpg';
+import Resume from '../images/John Anthony Pesco RESUME.pdf';
 
 const textToType = "I'm a System Developer / Web Developer";
 
 const certificates = [
   { src: NCII, alt: "NCII - CSS"},
+  { src: Innovex, alt: "Innovex"},
+  { src: BestPortfolio, alt: "Best IT Portfolio Profile"},
+  { src: Best, alt: "Best Student Award"},
+  { src: Innovateit, alt: "Innovate it CyberSecurity"},
+  { src: OracleAnalytics, alt: "Oracle Analytics Cloud 2025"},
   { src: AwsArchitecting, alt: "AWS Cloud Architecting"},
   { src: AwsDeveloping, alt: "AWS Cloud Developing"},
-  { src: Innovex, alt: "Innovex"},
   { src: Database, alt: "Database Management"},
-  { src: Best, alt: "Best Student Award"},
   { src: Iccs, alt: "ICCS - CSS"},
   { src: Css, alt: "CSS"},
   { src: Suss, alt: "Suss"},
@@ -90,33 +97,31 @@ export default function Home() {
     };
 
     useEffect(() => {
-        if (index === textToType.length) {
-            const resetTimer = setTimeout(() => {
-                setTypedText('');
-                setIndex(0);
-            }, 2000);
+        let timerId;
+        if (index === textToType.length) return;
 
-            return () => clearTimeout(resetTimer);
-        }
-
-        const typingTimer = setTimeout(() => {
+        timerId = setTimeout(() => {
             setTypedText(textToType.substring(0, index + 1));
             setIndex(prevIndex => prevIndex + 1);
         }, 50);
 
-        return () => clearTimeout(typingTimer);
+        return () => clearTimeout(timerId);
     }, [index, textToType]);
+
+    const openResume = () => {
+        window.open(Resume, '_blank');
+    }
 
     return (
         <>
-            <Nav />
+            <Nav openResume={openResume}/>
             <main className='pb-20'>
                 <section id='home' className='px-10 sm:px-32 mt-32 flex flex-col-reverse lg:flex-row items-center justify-center scroll-mt-24'>
                     <div className='w-full lg:w-1/2 flex flex-col gap-4 items-start'>
                         <h1 id='h1' className='text-3xl lg:text-4xl font-bold mt-5 lg:mt-0'>Hi, I'm <span className='text-[#f12711] text-4xl lg:text-5xl'>John Anthony Pesco</span></h1>
                         <p id='p' className='text-3xl font-regular'>
                             {typedText}
-                            <span className="blinking-cursor">|</span>
+                            <span className="blinking-cursor"></span>
                         </p>
 
                         {/* Social Components here */}
@@ -124,8 +129,8 @@ export default function Home() {
                         {/* Social Components here */}
 
                         <div className='flex gap-4 mt-5'>
-                            <button className='px-4 py-2 border border-[#f12711] rounded-lg hover:cursor-pointer hover:-translate-y-1 transition duration-300'>Contact Me</button>
-                            <button onClick={() => window.open("https://pescojohnanthony.jobs180.com/", '_blank')} id='downloadcv' className='flex items-center gap-2 px-4 py-2 rounded-lg hover:cursor-pointer hover:-translate-y-1 transition duration-300'><i class="fa-solid fa-file-export"></i>Download CV</button>
+                            <button className='px-4 py-2 border border-[#f12711] rounded-lg hover:cursor-pointer hover:-translate-y-1 transition duration-300' onClick={() => {document.getElementById('contact').scrollIntoView({behavior: 'smooth'})}}>Contact Me</button>
+                            <button onClick={openResume} id='downloadcv' className='flex items-center gap-2 px-4 py-2 rounded-lg hover:cursor-pointer hover:-translate-y-1 transition duration-300'><i class="fa-solid fa-file-export"></i>Download CV</button>
                         </div>
                     </div>
 
@@ -153,7 +158,7 @@ export default function Home() {
                                 as a renowned authority in the pursuit of success.
                             </p>
 
-                            <button id='downloadcv' className='flex items-center gap-2 px-4 py-2 rounded-lg hover:cursor-pointer hover:-translate-y-1 transition duration-300 mt-10 lg:mt-24'><i class="fa-solid fa-file-export"></i>Download my CV</button>
+                            <button id='downloadcv' onClick={openResume} className='flex items-center gap-2 px-4 py-2 rounded-lg hover:cursor-pointer hover:-translate-y-1 transition duration-300 mt-10 lg:mt-24'><i class="fa-solid fa-file-export"></i>Download my CV</button>
                         </div>
                     </div>
 
