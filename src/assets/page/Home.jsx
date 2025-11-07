@@ -31,7 +31,11 @@ import Rmpoims from '../images/rmpoims.png';
 import BestPortfolio from '../images/Best IT Portfolio Profile.jpg';
 import Innovateit from '../images/Innovate it CyberSecurity.jpg';
 import OracleAnalytics from '../images/Oracle Analytics Cloud 2025.jpg';
-import Resume from '/John Anthony Pesco RESUME.pdf';
+import Resume from '/Pesco, John Anthony L. - CV.pdf';
+import RMPOIMSAPP from '../images/RMPOIMS - Mobile App.jpg';
+import GTINVENTORY from '../images/GT-Inventory.png';
+import DEBUGME from '../images/DEBUG-ME 1ST RUNNER UP.jpg';
+
 const textToType = "I'm a System Developer / Web Developer";
 
 const certificates = [
@@ -39,6 +43,7 @@ const certificates = [
   { src: Innovex, alt: "Innovex"},
   { src: BestPortfolio, alt: "Best IT Portfolio Profile"},
   { src: Best, alt: "Best Student Award"},
+  { src: DEBUGME, alt: "DEBUG-ME 1ST RUNNER UP"},
   { src: Innovateit, alt: "Innovate it CyberSecurity"},
   { src: OracleAnalytics, alt: "Oracle Analytics Cloud 2025"},
   { src: AwsArchitecting, alt: "AWS Cloud Architecting"},
@@ -57,14 +62,16 @@ const certificates = [
 
 const projects = [
     { src: Rmpoims, title: 'RCT MED PHARMA ORDERING AND INVENTORY MANAGEMENT SYSTEM', description: 'RMPOIMS is our capstone project that allows you to place orders, track inventory, and manage transactions with ease.', link: 'https://github.com/johnanthonypesco/RMPOIMS.git' },
-    { src: AcademiCheck, title: 'ACADEMICHECK', description: 'A AcademiCheck is a system that focuses on student attendance monitoring.', link: 'https://github.com/Jann100815/ATTENDANCE-MONITORING-SYSTEM.git' },
-    { src: ArkVisions, title: 'ARK VISIONS APPOINTMENT SYSTEM', description: 'A Ark Visions Appointment System is a system that the user can book their chosen services.', link: 'https://github.com/SDEG77/TRIPLE-SUBJECTS.git' },
-    { src: Ampms, title: 'Ampms', description: 'AMPMS is a Attendance and Payroll Management System of a Team Intelligence', link: 'https://drive.google.com/drive/u/0/folders/1FDmpdUwRW2DiYjfQ7QK-EZBhkCwT8Zxz' },
-    { src: Lucidity, title: 'Lucidity', description: 'Lucidity is a e-commerce website/system that the user can view, add to cart, and checkout a item.', link: 'https://drive.google.com/drive/u/0/folders/12dtdeChUzOsxb90m_78Ug9XzFnBALmII' },
-    { src: Catalog, title: 'Team Intelligence Catalog', description: 'A Team Intelligence Catalouge is a website that the user can view their offered services.', link: 'https://drive.google.com/drive/u/0/folders/12qPFnp4GGBbYl8MEjB3n60Iu8CsrCfY3' },
-    { src: Evaluator, title: 'Student Evaluator System', description: 'A Student Evaluator System is a system that the Faculty can evaluate a student.', link: 'https://drive.google.com/drive/folders/10otrZ1e4egxKKygwayfgjQzvtslx3bGx?fbclid=IwAR3yZP-rFoXD__SbUddjfAwBOinNcY-2-OI6vPZ-vZf_RLCAReeVQGzh2Fk' },
+    { src: RMPOIMSAPP, title: 'RMPOIMS - Mobile App', description: 'RMPOIMS is our capstone project that allows you to place orders, track inventory, and manage transactions with ease.', link: 'https://github.com/johnanthonypesco/RMPOIMS-APP.git' },
+    { src: GTINVENTORY, title: 'GT-Inventory', description: 'GT-Inventory is a system of General Tinio Nueva Ecija where the RHU can manage their inventory of their medicines', link: 'https://github.com/johnanthonypesco/GT-Inventory.git' },
+    { src: ArkVisions, title: 'ARK VISIONS APPOINTMENT SYSTEM', description: 'The Ark Visions Appointment System is a system that the user can book their chosen services.', link: 'https://github.com/SDEG77/TRIPLE-SUBJECTS.git' },
+    { src: AcademiCheck, title: 'ACADEMICHECK', description: 'Academicheck is an Attendance Management System that the student allows to register and check their attendance', link: 'https://github.com/Jann100815/ATTENDANCE-MONITORING-SYSTEM.git' },
+    { src: Ampms, title: 'Ampms', description: 'AMPMS is an Attendance and Payroll Management System of a Team Intelligence', link: 'https://drive.google.com/drive/u/0/folders/1FDmpdUwRW2DiYjfQ7QK-EZBhkCwT8Zxz' },
+    { src: Lucidity, title: 'Lucidity', description: 'Lucidity is an e-commerce website/system that the user can view, add to cart, and checkout a item.', link: 'https://drive.google.com/drive/u/0/folders/12dtdeChUzOsxb90m_78Ug9XzFnBALmII' },
+    { src: Catalog, title: 'Team Intelligence Catalog', description: 'The Team Intelligence Catalouge is a website that the user can view their offered services.', link: 'https://drive.google.com/drive/u/0/folders/12qPFnp4GGBbYl8MEjB3n60Iu8CsrCfY3' },
+    { src: Evaluator, title: 'Student Evaluator System', description: 'The Student Evaluator System is a system that the Faculty can evaluate a student.', link: 'https://drive.google.com/drive/folders/10otrZ1e4egxKKygwayfgjQzvtslx3bGx?fbclid=IwAR3yZP-rFoXD__SbUddjfAwBOinNcY-2-OI6vPZ-vZf_RLCAReeVQGzh2Fk' },
     { src: PetMed, title: 'PetMed', description: 'PetMed is an android application that the user can book their chosen services to their pets', link: 'https://drive.google.com/drive/u/0/folders/15wNFdyvziDln1nbbUNN9vI57bI24qeuO' },
-    { src: Resort, title: 'Resort Management System', description: 'A resort management system is the user can book his/her chosen room of the hotel.', link: 'https://drive.google.com/drive/folders/10otrZ1e4egxKKygwayfgjQzvtslx3bGx?fbclid=IwAR3yZP-rFoXD__SbUddjfAwBOinNcY-2-OI6vPZ-vZf_RLCAReeVQGzh2Fk' },
+    { src: Resort, title: 'Resort Management System', description: 'The resort management system is the user can book his/her chosen room of the hotel.', link: 'https://drive.google.com/drive/folders/10otrZ1e4egxKKygwayfgjQzvtslx3bGx?fbclid=IwAR3yZP-rFoXD__SbUddjfAwBOinNcY-2-OI6vPZ-vZf_RLCAReeVQGzh2Fk' },
 ];
 
 export default function Home() {
@@ -197,7 +204,7 @@ export default function Home() {
                     <h1 id='portfoliotitle' className='text-2xl font-bold'>Portfolio</h1>
                     <p id='totop' className='text-[#f12711] mt-5 text-lg'>Checkout my Certificates</p>
 
-                    <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div className="mt-10 flex flex-wrap justify-center gap-5">
                         {certificates.map((certificate, index) => (
                             <img
                                 key={index}
@@ -213,7 +220,7 @@ export default function Home() {
 
                     <div className="mt-10 flex flex-wrap gap-5 justify-center">
                         {projects.map((project, index) => (
-                            <div key={index} className="w-fit flex flex-col w-[330px] h-[300px]">
+                            <div key={index} className="w-fit flex flex-col w-xl h-full max-h-[300px] shadow-sm rounded-[15px] shadow-[#f12711] p-5">
                                 <img id='totop' src={project.src} alt={project.title} className="w-[330px] h-[170px] rounded-[15px]"/>
                                 <p className="text-[#f12711] font-semibold px-1 mt-1 w-[340px]">{project.title}</p>
                                 <p className="w-[340px] text-[12px] px-1">{project.description}</p>
@@ -258,7 +265,7 @@ export default function Home() {
                             </div>
                             <div id='toleft' className="flex flex-col">
                                 <p className="flex gap-4 items-center"><i className="fa-solid fa-location-dot text-[#f12711] text-[20px]"></i>Location: San Cristobal, Licab, Nueva Ecija</p>
-                                <p className="flex gap-4 items-center mt-4"><i className="fa-solid fa-phone text-[#f12711] text-[20px]"></i>Phone: 09193294773</p>
+                                <p className="flex gap-4 items-center mt-4"><i className="fa-solid fa-phone text-[#f12711] text-[20px]"></i>Phone: +63 919-329-4773</p>
                                 <p className="flex gap-4 items-center mt-4"><i className="fa-solid fa-envelope text-[#f12711] text-[20px]"></i>Email: joli.pesco.au@phinmaed.com</p>
                             </div>
                         </div>

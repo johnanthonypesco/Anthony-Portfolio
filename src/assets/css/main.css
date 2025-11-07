@@ -22,6 +22,20 @@ body{
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #fb75005d;
+}
+::-webkit-scrollbar-thumb {
+    background: #f12711;
+    border-radius: 10px;
+    border: 3px solid #fb75005d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f12711;
+}
 footer{
     box-shadow: 0 -5px 8px rgba(197, 113, 4, 0.359);
 }
