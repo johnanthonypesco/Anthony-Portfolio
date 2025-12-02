@@ -3,7 +3,7 @@ import Social from '../components/Social.jsx';
 export default function Footer(){
     return(
         <footer className="py-10 flex flex-col justify-center items-center lg:mt-0">
-            <h1 className="text-center text-[30px] font-semibold uppercase text-[#f12711]">Anthony</h1>
+            <h1 className="text-center text-[30px] font-semibold uppercase text-[#f12711]">John Anthony Pesco</h1>
             <ul className="flex gap-4 md:gap-10 justify-center items-center mt-5">
                 <a href="#home" className="uppercase hover:text-[#f12711] font-semibold">Home</a>
                 <a href="#about" className="uppercase hover:text-[#f12711] font-semibold">About Me</a>
